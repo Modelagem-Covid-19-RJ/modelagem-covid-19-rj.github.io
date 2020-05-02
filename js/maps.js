@@ -15,6 +15,10 @@ CartoDB_Positron.addTo(map);
 //L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: 'OSM'}).addTo(map);
 
 
+var geojsonLayer = new L.GeoJSON.AJAX('includes/geojson/geojs_bairros_rj.json');
+
+geojsonLayer.addTo(map);
+
 function style(feature) {
     return {
         fillColor: getColor(feature.properties.NOME),
@@ -27,3 +31,5 @@ function style(feature) {
 }
 //alert(bairros_data);
 L.geoJson(bairros_data, {style: style}).addTo(map);
+
+

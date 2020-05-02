@@ -43,11 +43,10 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#695dda",endCo
   background: yellow;
 }
 
-.mc-map-container {
-}
 
 .mc-info-container {
   background: #fff;
+  text-align: center;
   box-shadow: 5px 0 100px red;
 }
 
@@ -71,6 +70,19 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#695dda",endCo
   margin-left: 10px;
 }
 
+
+.mc-infos-conf h4, .mc-infos-obit h4, .mc-infos-let h4 {
+  text-align: center;
+  margin-left: 5px;
+}
+
+.mc-infos-conf p, .mc-infos-obit p, .mc-infos-let p {
+  text-align: center;
+  margin-top: 15px;
+  margin-left: 0px;
+  font-size: 0.9em;
+}
+
 .mc-infos-conf {
   background: #2193b0;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to top, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
@@ -79,16 +91,15 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#695dda",endCo
 }
 
 .mc-infos-obit {
-  background: #fc4a1a;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to top, #f7b733, #fc4a1a);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to top, #f7b733, #fc4a1a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-margin-left: 40px
+	background: #fc4a1a;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #f7b733, #fc4a1a);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #f7b733, #fc4a1a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	margin-left: 20px;
 }
 
 .mc-infos-let {
-  background: #56ab2f;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #a8e063, #56ab2f);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #a8e063, #56ab2f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    margin-left: 40px
+	background: #44A08D;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #093637, #44A08D);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #093637, #44A08D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	margin-left: 20px;
 }
