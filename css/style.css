@@ -42,3 +42,15 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#695dda",endCo
 .mc-content {
   background: yellow;
 }
+
+.mc-map-container {
+}
+
+.mc-info-container {
+  background: #fff;
+}
+
+#map {
+  width: 100%;
+  height: 100vh;
+}
