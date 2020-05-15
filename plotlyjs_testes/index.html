@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Plotly.js -->
+         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+      </head>
+      
+      <body>
+        <div id="myDiv" style="width: 700px; height: 400px;"><!-- Plotly chart will be drawn inside this DIV --></div>
+        <script>
+       function makeplot() {
+    Plotly.d3.csv("dados-series-temp-bairros.csv", function(data){ processData(data) } );
+
+};
+    
+function processData(allRows) {
+
+    var bairros = ['COPACABANA'];
+    var num_bairros = bairros.length;
+
+    for (var i=0; i < num_bairros; i++){
+        var x = [], y = [], traces = [];
+
+        for (var i=0; i<allRows.length; i++) {
+            row = allRows[i];
+            x.push( row['Datas'] );
+            y.push( row[bairros[i]] );
+        }
+        traces.push([x, y, bairros[i]])
+        makePlotly( x, y, bairros[i]);
+    }
+}
+
+function makePlotly( x, y, nome){
+    var plotDiv = document.getElementById("plot");
+    var traces = [{
+        x: x, 
+        y: y,
+        name: nome,
+        showlegend: true
+    }];
+
+    Plotly.newPlot('myDiv', traces, 
+        {title: 'Séries temporais de casos acumulados por bairro'});
+};
+  makeplot();
+        </script>
+      
+    </body>
+</html>
