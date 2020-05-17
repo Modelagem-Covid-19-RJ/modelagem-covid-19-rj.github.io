@@ -1,34 +1,22 @@
-# Change Log
+# Changelog
 
-## [1.4.0] 2017-11-03
-### Library Updates
-- jQuery - `3.2.1`
-- bootstrap - `3.3.7`
-- chartist - `0.11.0`
+## [1.1.2] 2020-02-04
+### Fixes
+- Fixed broken links
+- Added Upgrade to PRO Page
+- Readme updated
 
-### Bug Fixing
-- replaced old javascript checkboxes and radios with only css checkboxes and radios
-- fixed responsive sidebar
-- small bug fixes
+## [1.1.1] 2019-12-20
+### Fixes
+- Fixed navbar classes
+- Fixed 'modal-' classes
+- Cleaned scss files
 
-## [1.3.1] 2017-01-19
-- switched to MIT license
+## [1.1.0] 2019-07-01
+### Bootstrap Update, Libraries Update
+- Bootstrap updated to `4.3.1`
+- libraries updated to latest versions
+- fixed issues
 
-## [1.3] 2016-01-22
-### New Template page + Video Tutorial [current version]
-- added the default template page + youtube video tutorial on how to create an Admin Template (link: https://www.youtube.com/watch...)
-
-## [1.2] 2016-01-17
-### New Page
-- for those who want to upsell inside their dashboard we added a new page "Upgrade to PRO" with a pricing and options table
-
-## [1.1] 2015-09-08
-### Bug Fixing
-- added company name/logo inside the sidebar for small screens
-- fixed bug for notification with close button on small screens
-- fix live preview bug for download on small screens
-- fix table responsive for small screens
-- added new labels for chartist on small screens
-
-## [1.0] 2015-08-20
-### Initial Release
+## [1.0.0] 2018-09-26
+### Original Release
