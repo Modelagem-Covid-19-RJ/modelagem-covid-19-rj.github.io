@@ -32,6 +32,7 @@
   <!-- CSS Files -->
   <link href="./assets/css/argon-dashboard.css?v=1.1.2" rel="stylesheet" />
   <link rel='stylesheet' type = "text/css" href='assets/fonts/icofont.min.css' />
+  <link rel='stylesheet' type = "text/css" href='assets/css/style.css' />
 </head>
 
 <body class="">
@@ -55,6 +56,7 @@
       <div class="container-fluid">
         <div class="header-body">
           <!-- Card stats -->
+
           <div class="row">
             <div class="col-xl-3 col-lg-6">
               <div class="card card-stats mb-4 mb-xl-0">
@@ -125,13 +127,15 @@
       </div>
     </div>
     <div class="container-fluid mt--7">
+
+      <!-- GEOPLOT 1 -->
       <div class="row">
         <div class="col-xl-8 mb-5 mb-xl-0">
           <div class="card bg-gradient-white shadow">
             <div class="card-header bg-transparent">
               <div class="row align-items-center">
                 <div class="col">
-                  <h6 class="text-uppercase text-light ls-1 mb-1">Overview</h6>
+                  <h6 class="text-uppercase text-light ls-1 mb-1">Mapa</h6>
                   <h2 class="mb-0">Casos Confirmados por Bairro</h2>
                 </div>
                 <div class="col">
@@ -157,7 +161,66 @@
               <div class="chart">
                 <!-- Chart wrapper -->
                 <!-- <div id = "tester">a</div> -->
-                <div id="tester" class="chart-canvas" style = 'height: 100%'></div>
+                <div id="plot_GEO_ACUMULADO_CONFIRMADOS" class='plt_size300'></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+              <div class="row align-items-center">
+                <div class="col">
+                  <h6 class="text-uppercase text-muted ls-1 mb-1">Dados</h6>
+                  <h2 class="mb-0">Casos por Área de Planejamento</h2>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <!-- Chart -->
+              <div class="chart">
+                <div id="plot_BP_GEODATA_CONFIRMADOS" class="chart-canvas plt_size300"></div>
+              </div>
+            </div> 
+          </div>
+        </div>
+      </div>
+    
+      <!-- TIME SERIES ACUMULADOS -->
+
+      <div class="row mt-5">
+        <div class="col-xl-8 mb-5 mb-xl-0">
+          <div class="card bg-gradient-white shadow">
+            <div class="card-header bg-transparent">
+              <div class="row align-items-center">
+                <div class="col">
+                  <h6 class="text-uppercase text-light ls-1 mb-1">Série Temporal</h6>
+                  <h2 class="mb-0">Casos Confirmados por Bairro</h2>
+                </div>
+                <div class="col">
+                  <ul class="nav nav-pills justify-content-end">
+                    <li class="nav-item mr-2 mr-md-0" data-toggle="chart" data-target="#chart-sales" data-update='{"data":{"datasets":[{"data":[0, 20, 10, 30, 15, 40, 20, 60, 60]}]}}' data-prefix="$" data-suffix="k">
+                      <a href="#" class="nav-link py-2 px-3 active" data-toggle="tab">
+                        <span class="d-none d-md-block">Confirmados</span>
+                        <span class="d-md-none">C</span>
+                      </a>
+                    </li>
+                    <li class="nav-item" data-toggle="chart" data-target="#chart-sales" data-update='{"data":{"datasets":[{"data":[0, 20, 5, 25, 10, 30, 15, 40, 40]}]}}' data-prefix="$" data-suffix="k">
+                      <a href="#" class="nav-link py-2 px-3" data-toggle="tab">
+                        <span class="d-none d-md-block">Óbitos</span>
+                        <span class="d-md-none">O</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <!-- Chart -->
+              <div class="chart">
+                <!-- Chart wrapper -->
+                <!-- <div id = "tester">a</div> -->
+                <div id="plot_serieTemporal" class='plt_size300'></div>
               </div>
             </div>
           </div>
@@ -175,12 +238,14 @@
             <div class="card-body">
               <!-- Chart -->
               <div class="chart">
-                <canvas id="chart-orders" class="chart-canvas"></canvas>
+                <div id="plot_BP_GEODATA_CONFIRMADOS" class="chart-canvas plt_size300"></div>
               </div>
-            </div>
+            </div> 
           </div>
         </div>
       </div>
+
+
       <div class="row mt-5">
         <div class="col-xl-8 mb-5 mb-xl-0">
           <div class="card shadow">
@@ -421,10 +486,10 @@
   <script src="./assets/js/plugins/chart.js/dist/Chart.extension.js"></script>
   <!--   Argon JS   -->
   <script src="./assets/js/argon-dashboard.min.js?v=1.1.2"></script>
-  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+  <!-- <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script> -->
   <script src = "./assets/js/plotly.min.js"></script>
   <script src = "./assets/js/behaviors.js"></script>
-  <script src = "./assets/js/scripts.js"></script>
+  <script src = "./assets/js/plots.js"></script>
   <script>
     window.TrackJS &&
       TrackJS.install({

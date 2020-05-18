@@ -1,0 +1,21 @@
+.modebar .icon {
+    width: 1.2em;
+}
+
+#plot_serieTemporal .svg-container {
+    background: orange;
+}
+
+.js-plotly-plot .plotly .modebar {
+    right: 0;
+    top: -50px;
+    transform: translate3d(-50%, -85%, 0);
+}
+
+#plot_serieTemporal #symbol {
+    display: none;
+}
+
+.plt_size300 {
+    height: 370px;
+}
