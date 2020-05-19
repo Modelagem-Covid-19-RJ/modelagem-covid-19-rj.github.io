@@ -90,8 +90,8 @@ function makePlotly_TS(x, y, idDiv){
 
 
 function processData_BP(allRows, idDiv) {
-  var x = ['Fora do<br> Município','Indefinidos', 'AP 1', 'AP 2', 'AP 3', 'AP 4', 'AP 5'];
-  var y = [200,2000,500,200,300,800,400];
+  var x = ['Fora do<br> município','Indefinidos', 'AP 1', 'AP 2', 'AP 3', 'AP 4', 'AP 5'];
+  var y = [139,3579,335,2062,2104,1038,1142];
   makePlotly_BP( x, y , idDiv);
 }
 
@@ -185,12 +185,12 @@ function makePlotly_BP(x, y, idDiv){
         r: 30,
         l: 40,
         pad: 0
-      },
-      dragmode: false
+      }
     };
             
     
-    var config = {mapboxAccessToken: "pk.eyJ1IjoiZ2lsc21uZXRvIiwiYSI6ImNrYWN6ZWwzbDAyaXMyd3M3Y2FsN2tmOGMifQ.YT4O17BkkaihU_o9fzUxqg"};
+    var config = {mapboxAccessToken: "pk.eyJ1IjoiZ2lsc21uZXRvIiwiYSI6ImNrYWN6ZWwzbDAyaXMyd3M3Y2FsN2tmOGMifQ.YT4O17BkkaihU_o9fzUxqg",
+      scrollZoom: false};
     
     Plotly.newPlot(idDiv, data, layout, config);
   };
