@@ -148,11 +148,10 @@ function makePlotly_BP(x, y, idDiv){
     makePlotly_GEO( z, y, z_abs, nome, idDiv );
   }
   
-  function makePlotly_GEO(z, y, z_abs, nomes, idDiv){
+  function makePlotly_GEO(z, y, z_abs, nome, idDiv){
     var max = z.reduce(function(a, b) {
       return Math.max(a, b);
     });
-    
     var data = [{
       type: "choroplethmapbox",
       locations: y,
@@ -161,9 +160,14 @@ function makePlotly_BP(x, y, idDiv){
       reversescale: true,
       zmin: 0,
       zmax: max,
+      customdata: z_abs,
+      text: nome,
       geojson: "https://raw.githubusercontent.com/modelagemcovid19/covid19/master/dados/RJ/cidade_rj/dados_geo/geojs_Bairros.json",
-      featureidkey: "properties.OBJECTID"
-    }];
+      featureidkey: "properties.OBJECTID",
+      hovertemplate: '%{text} <br>Casos: %{customdata:.0f} <br>Casos rel.: %{z:.3f}',
+      name: ''
+    },
+  ];
     
     var layout = { 
       geo: { fitbounds: "locations", visible: false },
@@ -190,7 +194,8 @@ function makePlotly_BP(x, y, idDiv){
             
     
     var config = {mapboxAccessToken: "pk.eyJ1IjoiZ2lsc21uZXRvIiwiYSI6ImNrYWN6ZWwzbDAyaXMyd3M3Y2FsN2tmOGMifQ.YT4O17BkkaihU_o9fzUxqg",
-      scrollZoom: false};
+      scrollZoom: false,
+      modeBarButtonsToRemove: ['lasso2d']};
     
     Plotly.newPlot(idDiv, data, layout, config);
   };
