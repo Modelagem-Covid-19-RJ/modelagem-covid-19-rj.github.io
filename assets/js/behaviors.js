@@ -7,3 +7,8 @@ var url_nav = "https://raw.githubusercontent.com/modelagemcovid19/modelagemcovid
 $(function(){
     $("#sidenav-main").load(url_nav);
 });
+
+
+function makeplot(tipo, idDiv) {
+    Plotly.d3.csv(dataFiles[tipo], function(data){ callbackFuncs[tipo](data, idDiv) } );
+  };
